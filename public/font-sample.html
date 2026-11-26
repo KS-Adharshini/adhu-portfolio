@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucinda (Lucida Grande) - Font Specimen & Sample</title>
+  <style>
+    @font-face {
+      font-family: 'Lucinda';
+      src: url('/fonts/Lucida-Grande.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Lucinda';
+      src: url('/fonts/Lucida-Grande-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #080c12;
+      color: #e2e8f0;
+      font-family: 'Lucinda', sans-serif;
+      min-height: 100vh;
+      padding: 40px 24px 80px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(255, 120, 30, 0.15);
+      border: 1px solid rgba(255, 120, 30, 0.45);
+      color: #ff9d54;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 28px;
+      margin-bottom: 40px;
+    }
+
+    h1.hero-sample {
+      font-size: clamp(48px, 8vw, 92px);
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      text-shadow: 0 4px 24px rgba(255, 120, 30, 0.35);
+      margin-bottom: 12px;
+    }
+
+    .sub-sample {
+      font-size: 20px;
+      color: #94a3b8;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .card {
+      background: #0f1622;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ff8c42;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 12px;
+    }
+
+    .alphabet-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .alpha-row {
+      font-size: 28px;
+      letter-spacing: 0.06em;
+      color: #ffffff;
+      word-break: break-all;
+    }
+
+    .alpha-row.bold {
+      font-weight: 700;
+      color: #ff9d54;
+    }
+
+    .alpha-row.muted {
+      color: #cbd5e1;
+      font-size: 22px;
+    }
+
+    .size-ladder {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .size-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+      padding-bottom: 16px;
+    }
+
+    .size-meta {
+      font-size: 12px;
+      color: #64748b;
+      font-family: monospace;
+      text-transform: uppercase;
+    }
+
+    .size-text {
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .weights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .weight-box {
+      background: #141d2c;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .weight-label {
+      font-size: 13px;
+      color: #ff8c42;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .interactive-input {
+      width: 100%;
+      background: #090e15;
+      border: 1px solid rgba(255, 120, 30, 0.4);
+      border-radius: 10px;
+      padding: 16px 20px;
+      color: #ffffff;
+      font-family: 'Lucinda', sans-serif;
+      font-size: 26px;
+      outline: none;
+      transition: border-color 0.2s;
+      margin-bottom: 16px;
+    }
+
+    .interactive-input:focus {
+      border-color: #ff8c42;
+      box-shadow: 0 0 16px rgba(255, 120, 30, 0.3);
+    }
+
+    .interactive-preview {
+      min-height: 90px;
+      padding: 20px;
+      background: #090e15;
+      border-radius: 10px;
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      font-size: 42px;
+      line-height: 1.2;
+      color: #ffffff;
+      word-break: break-word;
+    }
+
+    .interactive-preview.bold {
+      font-weight: 700;
+      color: #ff9d54;
+    }
+
+    .grunge-location-name {
+      font-family: 'Lucinda', sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      color: #ffffff;
+      text-shadow: none;
+      display: inline-block;
+      background-image:
+        repeating-linear-gradient(115deg, transparent 0px, transparent 18px, rgba(150, 150, 150, 0.25) 19px, transparent 20px, transparent 38px),
+        repeating-linear-gradient(-45deg, transparent 0px, transparent 24px, rgba(160, 160, 160, 0.2) 25px, transparent 26px, transparent 52px),
+        radial-gradient(circle at 12% 18%, rgba(200, 200, 200, 0.5) 0.6px, transparent 1.2px),
+        radial-gradient(circle at 44% 72%, rgba(180, 180, 180, 0.55) 0.8px, transparent 1.4px),
+        radial-gradient(circle at 78% 28%, rgba(190, 190, 190, 0.5) 0.7px, transparent 1.3px),
+        radial-gradient(circle at 26% 82%, rgba(170, 170, 170, 0.45) 0.9px, transparent 1.5px),
+        radial-gradient(circle at 88% 66%, rgba(200, 200, 200, 0.5) 0.6px, transparent 1.2px),
+        radial-gradient(circle at 62% 14%, rgba(160, 160, 160, 0.6) 0.8px, transparent 1.4px),
+        linear-gradient(135deg, #ffffff 0%, #f5f5f5 15%, #d0d5dd 32%, #ffffff 48%, #b8c0cc 65%, #e8ecf2 82%, #ffffff 100%);
+      background-size: 80px 40px, 90px 45px, 60px 30px, 70px 35px, 65px 32px, 85px 42px, 75px 38px, 55px 28px, 100% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 30px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      color: #ffffff;
+      border-color: #ff8c42;
+      background: rgba(255, 140, 66, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Typography Specimen</div>
+    <header class="header">
+      <h1 class="hero-sample">LUCINDA</h1>
+      <p class="sub-sample">Lucida Grande · TrueType Web Font Package</p>
+    </header>
+
+    <!-- The 5 Location Names Showcase (Lucinda 20px + Distressed Vintage Grunge Texture) -->
+    <div class="card" style="border: 1px solid rgba(255, 140, 66, 0.4); box-shadow: 0 16px 50px rgba(0, 0, 0, 0.7);">
+      <div class="card-title" style="color: #ff9d54; display: flex; justify-content: space-between; align-items: center;">
+        <span>5 Project Location Names (Lucinda 20px · Distressed Vintage Grunge)</span>
+        <span style="font-size: 11px; color: #94a3b8; letter-spacing: 0.05em;">HUD HEADER TYPOGRAPHY</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; background: rgba(5, 7, 10, 0.7); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.06);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.7); letter-spacing: 0.12em;">LOCATION |</span>
+            <span class="grunge-location-name">The Cinder-Vail Peaks</span>
+          </div>
+          <span style="font-size: 12px; color: #64748b; font-family: monospace;">Projects Section</span>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; background: rgba(5, 7, 10, 0.7); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.06);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.7); letter-spacing: 0.12em;">LOCATION |</span>
+            <span class="grunge-location-name">The Obsidian Scar</span>
+          </div>
+          <span style="font-size: 12px; color: #64748b; font-family: monospace;">About & Exploration</span>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; background: rgba(5, 7, 10, 0.7); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.06);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.7); letter-spacing: 0.12em;">LOCATION |</span>
+            <span class="grunge-location-name">The Wrathful Caldera</span>
+          </div>
+          <span style="font-size: 12px; color: #64748b; font-family: monospace;">Quests & Victories</span>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; background: rgba(5, 7, 10, 0.7); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.06);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.7); letter-spacing: 0.12em;">LOCATION |</span>
+            <span class="grunge-location-name">The Infernal Threshold</span>
+          </div>
+          <span style="font-size: 12px; color: #64748b; font-family: monospace;">Skills Section</span>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; background: rgba(5, 7, 10, 0.7); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.06);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.7); letter-spacing: 0.12em;">LOCATION |</span>
+            <span class="grunge-location-name">Mount Pyre’s Reach</span>
+          </div>
+          <span style="font-size: 12px; color: #64748b; font-family: monospace;">Contact Section</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Application Headings -->
+    <div class="card">
+      <div class="card-title">Portfolio Typography Examples</div>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div>
+          <div style="font-size: 12px; color: #64748b; margin-bottom: 4px;">HERO VIEW TITLE (font-weight: 500)</div>
+          <div style="font-size: clamp(48px, 8vw, 84px); font-weight: 500; color: #ffffff; letter-spacing: 0.04em;">PORTFOLIO</div>
+        </div>
+        <div>
+          <div style="font-size: 12px; color: #64748b; margin-bottom: 4px;">SECTION OVERVIEW TITLE (font-weight: 700)</div>
+          <div style="font-size: clamp(36px, 6vw, 64px); font-weight: 700; color: #ffffff; letter-spacing: 0.04em;">VICTORIES</div>
+        </div>
+        <div>
+          <div style="font-size: 12px; color: #64748b; margin-bottom: 4px;">SECTION SUBTITLE & LOCATIONS (font-weight: 700)</div>
+          <div style="font-size: 24px; font-weight: 700; color: #ff9d54; letter-spacing: 0.12em;">TRIALS SURVIVED · THE WRATHFUL CALDERA</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weight Comparison -->
+    <div class="card">
+      <div class="card-title">Weights & Styles</div>
+      <div class="weights-grid">
+        <div class="weight-box">
+          <div class="weight-label">Regular (400)</div>
+          <p style="font-size: 24px; font-weight: 400; color: #ffffff; margin-bottom: 12px;">
+            The quick brown fox jumps over the lazy dog.
+          </p>
+          <p style="font-size: 15px; color: #94a3b8; font-weight: 400;">
+            Each creation is a relic — tested in battle, refined through failure, and sealed in the vault of experience.
+          </p>
+        </div>
+
+        <div class="weight-box">
+          <div class="weight-label">Bold (700)</div>
+          <p style="font-size: 24px; font-weight: 700; color: #ff9d54; margin-bottom: 12px;">
+            The quick brown fox jumps over the lazy dog.
+          </p>
+          <p style="font-size: 15px; color: #cbd5e1; font-weight: 700;">
+            Each creation is a relic — tested in battle, refined through failure, and sealed in the vault of experience.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Glyph Character Set -->
+    <div class="card">
+      <div class="card-title">Glyph Character Set</div>
+      <div class="alphabet-grid">
+        <div>
+          <div class="size-meta" style="margin-bottom: 6px;">UPPERCASE (A - Z)</div>
+          <div class="alpha-row">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
+        </div>
+        <div>
+          <div class="size-meta" style="margin-bottom: 6px;">LOWERCASE (a - z)</div>
+          <div class="alpha-row muted">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+        </div>
+        <div>
+          <div class="size-meta" style="margin-bottom: 6px;">NUMBERS (0 - 9) & SYMBOLS</div>
+          <div class="alpha-row bold">0 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * ( ) _ + - = [ ] { } : ; " ' &lt; &gt; , . ? /</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Size Hierarchy Scale -->
+    <div class="card">
+      <div class="card-title">Size Hierarchy Scale</div>
+      <div class="size-ladder">
+        <div class="size-item">
+          <span class="size-meta">100px - Master Display Title</span>
+          <div class="size-text" style="font-size: clamp(40px, 7vw, 100px); font-weight: 700;">THE FORGE</div>
+        </div>
+        <div class="size-item">
+          <span class="size-meta">64px - Hero Title</span>
+          <div class="size-text" style="font-size: clamp(32px, 5vw, 64px); font-weight: 700;">ABILITIES UNLOCKED</div>
+        </div>
+        <div class="size-item">
+          <span class="size-meta">36px - Section Header</span>
+          <div class="size-text" style="font-size: 36px; font-weight: 700;">Full-Stack AI & ML Architect</div>
+        </div>
+        <div class="size-item">
+          <span class="size-meta">24px - Navigation & Subtitles</span>
+          <div class="size-text" style="font-size: 24px; font-weight: 500;">Brimstone Basin · Qualification</div>
+        </div>
+        <div class="size-item">
+          <span class="size-meta">16px - Body Text</span>
+          <div class="size-text" style="font-size: 16px; font-weight: 400; color: #94a3b8;">
+            Power is earned, not given. Each ability was unlocked through repeated trials and relentless iteration.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Type Tester -->
+    <div class="card">
+      <div class="card-title">Interactive Live Type Tester</div>
+      <p style="color: #94a3b8; font-size: 14px; margin-bottom: 16px;">Type below to test your own custom text in Lucinda font:</p>
+      <input
+        type="text"
+        id="typeInput"
+        class="interactive-input"
+        placeholder="Type here..."
+        value="Adharshini KS — The Architect"
+      />
+      <div style="font-size: 12px; color: #64748b; margin-bottom: 6px;">REGULAR PREVIEW</div>
+      <div id="previewNormal" class="interactive-preview">Adharshini KS — The Architect</div>
+      <div style="font-size: 12px; color: #64748b; margin: 16px 0 6px;">BOLD PREVIEW</div>
+      <div id="previewBold" class="interactive-preview bold">Adharshini KS — The Architect</div>
+    </div>
+
+    <a href="/" class="back-btn">← Back to Portfolio</a>
+  </div>
+
+  <script>
+    const input = document.getElementById('typeInput');
+    const previewNormal = document.getElementById('previewNormal');
+    const previewBold = document.getElementById('previewBold');
+
+    input.addEventListener('input', (e) => {
+      const val = e.target.value || 'The Architect';
+      previewNormal.textContent = val;
+      previewBold.textContent = val;
+    });
+  </script>
+</body>
+</html>

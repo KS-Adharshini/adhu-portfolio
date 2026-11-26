@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <!-- Bar 1: Blue -->
+  <rect x="6" y="19" width="6.5" height="20" rx="3.25" fill="#3B82F6" />
+  <!-- Bar 2: Bright Yellow -->
+  <rect x="15.5" y="7" width="6.5" height="32" rx="3.25" fill="#FFD43B" />
+  <!-- Bar 3: Magenta / Pink -->
+  <rect x="25" y="15" width="6.5" height="24" rx="3.25" fill="#E70488" />
+  <!-- Bar 4: Cyan -->
+  <rect x="34.5" y="23" width="6.5" height="16" rx="3.25" fill="#24C1DF" />
+</svg>

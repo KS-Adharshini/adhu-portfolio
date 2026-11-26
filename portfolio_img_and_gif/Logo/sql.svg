@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <!-- Top disk -->
+  <ellipse cx="24" cy="11" rx="19" ry="7" fill="#00BCF2" />
+  <ellipse cx="24" cy="11" rx="16" ry="5.5" fill="#38BDF8" opacity="0.6" />
+  <!-- Middle cylinder -->
+  <path d="M5 11v11c0 3.87 8.5 7 19 7s19-3.13 19-7V11" fill="#0078D7" />
+  <ellipse cx="24" cy="11" rx="19" ry="7" fill="#0099EE" />
+  <ellipse cx="24" cy="11" rx="16" ry="5.5" fill="#56CCF2" opacity="0.8" />
+  <!-- Lower cylinder -->
+  <path d="M5 22v11c0 3.87 8.5 7 19 7s19-3.13 19-7V22" fill="#005A9E" />
+  <path d="M5 22c0 3.87 8.5 7 19 7s19-3.13 19-7" stroke="#00BCF2" stroke-width="1.5" />
+  <!-- Bottom curve outline -->
+  <path d="M5 33c0 3.87 8.5 7 19 7s19-3.13 19-7" stroke="#00BCF2" stroke-width="1.5" />
+  <!-- SQL label badge -->
+  <rect x="9" y="19" width="30" height="13" rx="3.5" fill="#031E35" stroke="#38BDF8" stroke-width="1.2" />
+  <text x="24" y="29.2" text-anchor="middle" font-family="'Share Tech Mono', monospace, -apple-system, sans-serif" font-size="10.5" font-weight="900" fill="#FFFFFF" letter-spacing="1">SQL</text>
+</svg>
