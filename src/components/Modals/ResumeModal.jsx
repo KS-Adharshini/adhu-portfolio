@@ -14,7 +14,8 @@ export default function ResumeModal({ onClose }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [onClose]);
 
-  const pdfUrl = '/Adharshini CV.pdf';
+  const pdfUrl = '/Adharshini CV.pdf?v=2';
+  const downloadUrl = '/Adharshini CV.pdf';
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -39,7 +40,7 @@ export default function ResumeModal({ onClose }) {
 
           <div className="resume-header-actions">
             <a
-              href={pdfUrl}
+              href={downloadUrl}
               download="Adharshini CV.pdf"
               className="dossier-btn highlight-btn"
               onClick={() => sounds.playClick()}
@@ -89,7 +90,7 @@ export default function ResumeModal({ onClose }) {
               <div className="resume-fallback-wrap">
                 <p>Your browser doesn&apos;t support direct PDF embedding.</p>
                 <a
-                  href={pdfUrl}
+                  href={downloadUrl}
                   download="Adharshini CV.pdf"
                   className="dossier-btn highlight-btn"
                 >
